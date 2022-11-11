@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- https://matthew.wagerfield.com/parallax/ -->
+    <div class="container">   <!-- scene을 영역 중간에 두기 위해 container로 scene을 감싼다. -->
+        <div id="scene">
+            <div data-depth="-0.3" class="b1">  <!-- 음수일 때는 마우스를 따라 움직이고, 양수일 때는 반대로 움직인다. -->
+                <img src="img/10.png" alt="">   <!-- class="b1"을 준 건 배경의 크기를 키우기 위해 -->
+            </div>
+            <div data-depth="-0.5" class="b1"> 
+                <img src="img/8.png" alt="">
+            </div>
+            <div data-depth="0.5" class="b1"> 
+                <img src="img/7.png" alt="">
+            </div>
+            <div data-depth="0.3" class="b1"> 
+                <img src="img/6.png" alt="">
+            </div>
+            <div data-depth="-0.3" class="b1"> 
+                <img src="img/5.png" alt="">
+            </div>
+            <div data-depth="-0.5"> 
+                <img src="img/4.png" alt="">
+            </div>
+            <div data-depth="0.7"> 
+                <img src="img/3.png" alt="">
+            </div>
+            <div data-depth="-0.6"> 
+                <img src="img/2.png" alt="">
+            </div>
+            <div data-depth="-0.3" class="b2"> 
+                <img src="img/9.png" alt="">   <!-- 글자가 도형에 가려서 안 보이면 밑으로 옮긴다. -->
+            </div>
+            <div data-depth="0.3"> 
+                <img src="img/1.png" alt="">
+            </div>
+          
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script>
+        var scene = document.getElementById('scene');
+        var parallaxInstance = new Parallax(scene);
+    </script>
+</body>
+</html>
